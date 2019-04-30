@@ -6,8 +6,20 @@ using System.Threading.Tasks;
 
 namespace TripTracker.BackService.Models
 {
-    public class Trip : TripTrackerDTO.Trip
+    public class Trip
     {
-        public virtual ICollection<Segment> Segments { get; set; }
+
+        [Key]
+        public int Id { get; set; }
+
+        [Required]
+        public string Name { get; set; }
+
+        [Required]
+        public DateTime StartDate { get; set; }
+
+        [Required]
+        public DateTime EndDate { get; set; }
+
     }
 }
