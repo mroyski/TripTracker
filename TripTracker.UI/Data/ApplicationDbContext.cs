@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using TripTracker.BackService.Models;
 
 namespace TripTracker.UI.Data
 {
@@ -12,5 +13,6 @@ namespace TripTracker.UI.Data
             : base(options)
         {
         }
+        public DbSet<TripTracker.BackService.Models.Trip> Trip { get; set; }
     }
 }

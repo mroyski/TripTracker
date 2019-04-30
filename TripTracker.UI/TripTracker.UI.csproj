@@ -2,14 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <UserSecretsId>aspnet-TripTracker.UI-8FA3F285-DFB5-4E5C-9CE2-B52B95E5213A</UserSecretsId>
+    <UserSecretsId>aspnet-TripTracker.UI-C8211C99-9803-45CC-A512-14AA8CE875A3</UserSecretsId>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.App"/>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\TripTracker.BackService\TripTracker.BackService.csproj" />
   </ItemGroup>
 
 </Project>
