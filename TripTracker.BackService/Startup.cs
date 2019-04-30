@@ -38,9 +38,13 @@ namespace TripTracker.BackService
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             app.UseSwagger();
-            app.UseSwaggerUI(options =>
-                options.SwaggerEndpoint("/swagger/v1/swagger.json", "Trip Tracker v1")
-            );
+
+            if (env.IsDevelopment() || env.IsStaging())
+            {
+                app.UseSwaggerUI(options =>
+                    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Trip Tracker v1")
+                );
+            }
 
             if (env.IsDevelopment())
             {
