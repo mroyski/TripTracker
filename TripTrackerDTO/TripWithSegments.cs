@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace TripTracker.BackService.Models
+namespace TripTrackerDTO
 {
-    public class TripWithSegments : TripTrackerDTO.Trip
+    public class TripWithSegments : Trip
     {
         public ICollection<Segment> Segments {get; set;}
 
